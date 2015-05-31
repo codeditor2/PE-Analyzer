@@ -1,0 +1,691 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\PEAnalyse.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""afxres.rc""         // 标准组件\r\n"
+    "#include ""afxprint.rc""       // 打印/打印预览资源\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\PEAnalyse.ico"
+IDR_PEAnalyseTYPE       ICON                    "res\\PEAnalyseDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "新建(&N)\tCtrl+N",              ID_FILE_NEW
+        MENUITEM "打开(&O)\tCtrl+O",              32779
+        MENUITEM "保存(&S)\tCtrl+S",              ID_FILE_SAVE
+        MENUITEM "另存为(&A)...",                  ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "打印(&P)...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "打印预览(&V)",                    ID_FILE_PRINT_PREVIEW
+        MENUITEM "打印设置(&R)...",                 ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "最近的文件",                       ID_FILE_MRU_FILE1
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                      ID_APP_EXIT
+    END
+    POPUP "视图(&V)"
+    BEGIN
+        MENUITEM "工具栏(&T)",                     ID_VIEW_TOOLBAR
+        MENUITEM "状态栏(&S)",                     ID_VIEW_STATUS_BAR
+    END
+    POPUP "分析"
+    BEGIN
+        MENUITEM "DOS_HEADER",                  ID_32771
+        MENUITEM "NT_HEADER",                   ID_32772
+        MENUITEM "SEC_TABLE",                   ID_32774
+    END
+    POPUP "文献算法"
+    BEGIN
+        MENUITEM "算法一",                         ID_32775
+        MENUITEM "算法二",                         ID_32776
+    END
+    POPUP "改进算法"
+    BEGIN
+        MENUITEM "位图资源",                        ID_32777
+        MENUITEM "算法",                          ID_32778
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于 PEAnalyse(&A)...",         ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 PEAnalyse"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "PEAnalyse   2.0 版",IDC_STATIC,75,10,83,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2012-2014",IDC_STATIC,68,34,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,16,WS_GROUP
+    LTEXT           "Made by Yuan、Zhang、Shou",IDC_STATIC,67,21,103,8,SS_NOPREFIX
+END
+
+IDD_DOS_HEADER DIALOGEX 0, 0, 294, 250
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    LTEXT           "WORD e_magic",IDC_STATIC,29,48,50,8
+    LTEXT           "WORD e_cblp",IDC_STATIC,29,68,45,8
+    EDITTEXT        IDC_MAGIC,96,44,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CBLP,96,64,40,14,ES_AUTOHSCROLL
+    LTEXT           "WORD e_cp",IDC_STATIC,29,88,40,8
+    LTEXT           "WORD e_crlc",IDC_STATIC,29,108,43,8
+    LTEXT           "WORD  e_cparhdr",IDC_STATIC,29,128,59,8
+    LTEXT           "WORD  e_minalloc",IDC_STATIC,29,148,59,8
+    LTEXT           "WORD  e_maxalloc",IDC_STATIC,29,168,62,8
+    LTEXT           "WORD  e_ss",IDC_STATIC,29,188,41,8
+    LTEXT           "WORD  e_sp",IDC_STATIC,29,208,42,8
+    LTEXT           "WORD  e_csum",IDC_STATIC,27,228,50,8
+    LTEXT           "WORD  e_ip",IDC_STATIC,173,45,40,8
+    LTEXT           "WORD  e_cs",IDC_STATIC,173,65,41,8
+    LTEXT           "WORD  e_lfarlc",IDC_STATIC,173,85,50,8
+    LTEXT           "WORD  e_ovno",IDC_STATIC,173,105,50,8
+    LTEXT           "WORD  e_res[4]",IDC_STATIC,173,125,54,8
+    LTEXT           "WORD  e_oemid",IDC_STATIC,173,145,53,8
+    LTEXT           "WORD  e_oeminfo",IDC_STATIC,173,165,60,8
+    LTEXT           "WORD  e_res2[10]",IDC_STATIC,173,185,62,8
+    LTEXT           "WORD  e_lfanew",IDC_STATIC,173,205,56,8
+    EDITTEXT        IDC_CP,96,84,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CRLC,96,104,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CPARHBR,96,124,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MINALLOC,96,144,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MAXALLOC,96,164,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SS,96,184,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SP,96,204,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CSUM,96,224,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_IP,235,44,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CS,235,64,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LFARLC,235,84,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_OVNO,235,104,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RES4,235,124,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_OEMID,235,144,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_OEMINFO,235,164,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RES2,235,184,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "分析",IDC_A,210,226,38,16
+    GROUPBOX        "    Dos Header",IDC_STATIC,16,32,133,210
+    EDITTEXT        IDC_LFANEW,235,202,40,14,ES_AUTOHSCROLL
+    GROUPBOX        "  Dos Header",IDC_STATIC,162,33,121,189
+    GROUPBOX        "",IDC_STATIC,16,4,267,22
+    LTEXT           "文件(&F):",IDC_STATIC,32,12,31,9
+    EDITTEXT        IDC_FILEPATH,65,11,214,12,ES_AUTOHSCROLL
+END
+
+IDD_PE_HEADER DIALOGEX 0, 0, 289, 250
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "分析",IDC_BUTTON1,47,226,39,16
+    LTEXT           "Signature",IDC_STATIC,15,37,32,8
+    EDITTEXT        IDC_EDIT1,83,85,40,14,ES_AUTOHSCROLL,WS_EX_RIGHT
+    LTEXT           "Machine",IDC_STATIC,16,85,27,8
+    LTEXT           "Number of Section",IDC_STATIC,16,104,60,8
+    LTEXT           "Time Date Stamp",IDC_STATIC,16,123,55,8
+    LTEXT           "Point to Symbol T",IDC_STATIC,16,142,56,8
+    LTEXT           "Number of Symbol",IDC_STATIC,16,161,59,8
+    LTEXT           "Size of OpHeaders",IDC_STATIC,16,180,60,8
+    LTEXT           "Characteristics",IDC_STATIC,16,199,48,8
+    LTEXT           "Entry Point",IDC_STATIC,162,36,36,8
+    LTEXT           "Code Base",IDC_STATIC,162,55,35,8
+    LTEXT           "Data Base",IDC_STATIC,162,77,34,8
+    LTEXT           "File Alignment",IDC_STATIC,162,99,45,8
+    LTEXT           "Image Base",IDC_STATIC,162,119,38,8
+    LTEXT           "Dll Flags",IDC_STATIC,162,143,27,8
+    LTEXT           "Image Size",IDC_STATIC,162,163,36,8
+    LTEXT           "Header Size",IDC_STATIC,162,183,39,8
+    LTEXT           "Subsystem",IDC_STATIC,162,203,36,8
+    LTEXT           "Section Alignment",IDC_STATIC,162,222,58,8
+    EDITTEXT        IDC_EDIT2,68,36,56,14,ES_AUTOHSCROLL,WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT3,83,104,40,14,ES_AUTOHSCROLL,WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT4,83,123,40,14,ES_AUTOHSCROLL,WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT5,83,142,40,14,ES_AUTOHSCROLL,WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT6,83,161,40,14,ES_AUTOHSCROLL,WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT7,83,180,40,14,ES_AUTOHSCROLL,WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT8,83,200,40,14,ES_AUTOHSCROLL,WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT9,230,32,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT10,231,52,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT11,231,74,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT12,231,95,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT13,231,119,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT14,231,141,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT15,231,181,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT16,231,161,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT17,231,201,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT18,231,221,40,14,ES_AUTOHSCROLL
+    GROUPBOX        " Signature",IDC_STATIC,7,24,134,37
+    GROUPBOX        "File Header",IDC_STATIC,7,69,134,153
+    GROUPBOX        " Optional Header32",IDC_STATIC,149,23,140,216
+    GROUPBOX        "",IDC_STATIC,7,1,282,19
+    LTEXT           "文件(&F):",IDC_STATIC,17,8,49,8
+    EDITTEXT        IDC_EDIT19,51,7,222,12,ES_AUTOHSCROLL
+END
+
+IDD_SEC_TABLE DIALOGEX 0, 0, 298, 178
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "分析",IDC_BUTTON1,131,156,38,15
+    GROUPBOX        "",IDC_STATIC,5,24,47,21
+    LTEXT           "Name",IDC_STATIC,20,32,19,8
+    GROUPBOX        "",IDC_STATIC,51,24,47,21
+    LTEXT           "VirAddress",IDC_STATIC,57,32,34,8
+    GROUPBOX        "",IDC_STATIC,97,24,49,21
+    LTEXT           "VirtualSize",IDC_STATIC,106,32,34,8
+    GROUPBOX        "",IDC_STATIC,145,24,48,21
+    LTEXT           "R_Offset",IDC_STATIC,155,32,31,8
+    GROUPBOX        "",IDC_STATIC,192,24,49,21
+    LTEXT           "R_Size",IDC_STATIC,208,32,22,8
+    GROUPBOX        "",IDC_STATIC,5,0,289,21
+    LTEXT           "文件(&F):",IDC_STATIC,19,8,41,9
+    EDITTEXT        IDC_EDIT1,51,6,241,12,ES_AUTOHSCROLL
+    LTEXT           "Characteristic",IDC_STATIC,244,32,50,8
+    GROUPBOX        "",IDC_STATIC,240,24,54,21
+    CONTROL         "",IDC_LIST2,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,5,44,288,99
+END
+
+IDD_ALO_ONE DIALOGEX 0, 0, 286, 246
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_STATIC,16,28,262,33
+    LTEXT           "文件(&F):",IDC_STATIC,22,41,31,9
+    EDITTEXT        IDC_EDIT4,54,40,219,12,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "",IDC_STATIC,17,64,261,59
+    GROUPBOX        "",IDC_STATIC,34,76,60,20
+    LTEXT           "第二层",IDC_STATIC,52,83,34,10
+    GROUPBOX        "",IDC_STATIC,93,76,60,20
+    LTEXT           "第三层",IDC_STATIC,112,83,34,10
+    GROUPBOX        "",IDC_STATIC,152,76,60,20
+    LTEXT           "第四层",IDC_STATIC,172,83,34,10
+    PUSHBUTTON      "资源情况",IDC_BUTTON1,227,86,41,16
+    EDITTEXT        IDC_EDIT1,34,95,60,16,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT2,93,95,60,16,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT3,152,95,60,16,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "",IDC_STATIC,17,126,261,88
+    LTEXT           "被嵌入水印：",IDC_STATIC,24,143,50,13
+    LTEXT           "P",IDC_STATIC,85,143,8,13
+    EDITTEXT        IDC_EDIT5,99,140,45,15,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Q",IDC_STATIC,157,142,8,13
+    EDITTEXT        IDC_EDIT6,168,140,46,15,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "嵌入水印",IDC_BUTTON2,227,139,41,16
+    LTEXT           "被提取水印：",IDC_STATIC,24,194,50,12
+    LTEXT           "P",IDC_STATIC,85,193,8,13
+    EDITTEXT        IDC_EDIT7,98,190,45,15,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Q",IDC_STATIC,155,192,8,13
+    EDITTEXT        IDC_EDIT8,166,190,46,15,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "提取水印",IDC_BUTTON4,228,190,41,16
+    PUSHBUTTON      "变形攻击",IDC_BUTTON3,228,166,41,16
+END
+
+IDD_ALO_TWO DIALOGEX 0, 0, 291, 243
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_STATIC,66,37,56,21
+    LTEXT           "DLLName",IDC_STATIC,79,44,30,8
+    GROUPBOX        "",IDC_STATIC,121,37,56,21
+    GROUPBOX        "",IDC_STATIC,176,37,56,21
+    CONTROL         "",IDC_LIST2,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,66,58,221,93
+    LTEXT           "文件(&F):",IDC_STATIC,14,17,28,9
+    GROUPBOX        "",IDC_STATIC,3,7,284,27
+    EDITTEXT        IDC_EDIT1,48,16,233,12,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "",IDC_STATIC,231,37,56,21
+    PUSHBUTTON      "引入表情况",IDC_BUTTON1,5,65,50,14
+    LTEXT           "Name",IDC_STATIC,139,44,19,8
+    LTEXT           "Ori_FirstThunk",IDC_STATIC,181,45,46,8
+    LTEXT           "First Thunk",IDC_STATIC,243,44,36,8
+    LTEXT           "模块数",IDC_STATIC,6,44,26,15
+    EDITTEXT        IDC_EDIT4,31,42,30,14,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "",IDC_STATIC,6,156,281,80
+    LTEXT           "被嵌入水印：",IDC_STATIC,19,172,50,13
+    LTEXT           "被提取水印：",IDC_STATIC,19,215,50,12
+    EDITTEXT        IDC_EDIT5,94,169,85,15,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "嵌入水印",IDC_BUTTON2,222,168,41,16
+    EDITTEXT        IDC_EDIT7,93,211,85,15,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "变形攻击",IDC_BUTTON3,223,191,41,16
+    PUSHBUTTON      "提取水印",IDC_BUTTON4,223,211,41,16
+    GROUPBOX        "",IDC_STATIC,3,37,284,113
+END
+
+IDD_BIT_SOURCE DIALOGEX 0, 0, 292, 215
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Button1",IDC_BUTTON1,198,126,50,14
+END
+
+IDD_OUR_ALO DIALOGEX 0, 0, 299, 254
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "位图情况",IDC_BUTTON1,33,153,45,14
+    LTEXT           "位图数目",IDC_STATIC,56,35,34,11
+    EDITTEXT        IDC_EDIT4,106,30,34,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "单色位图",IDC_STATIC,182,33,34,8
+    EDITTEXT        IDC_EDIT5,229,30,34,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "16色位图",IDC_STATIC,55,50,34,11
+    EDITTEXT        IDC_EDIT6,106,47,34,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "256色位图",IDC_STATIC,180,49,39,14
+    EDITTEXT        IDC_EDIT7,229,47,34,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "24位位图",IDC_STATIC,54,65,34,14
+    EDITTEXT        IDC_EDIT8,106,63,34,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           " 32位位图",IDC_STATIC,180,65,34,9
+    EDITTEXT        IDC_EDIT9,229,64,34,12,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "第一个16色位图的调色板信息",IDC_STATIC,18,81,270,110
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,96,109,182,76
+    GROUPBOX        "",IDC_STATIC,96,89,44,21
+    GROUPBOX        "",IDC_STATIC,139,89,46,21
+    LTEXT           "rgbGreen",IDC_STATIC,147,96,31,8
+    LTEXT           "rgbBlue",IDC_STATIC,107,96,27,8
+    LTEXT           "rgbReserved",IDC_STATIC,235,96,42,8
+    GROUPBOX        "",IDC_STATIC,184,89,48,21
+    GROUPBOX        "",IDC_STATIC,231,89,47,21
+    LTEXT           "rgbRed",IDC_STATIC,194,97,24,8
+    GROUPBOX        "位图情况",IDC_STATIC,18,22,270,57
+    GROUPBOX        "",IDC_STATIC,18,192,269,61
+    PUSHBUTTON      "嵌入水印",IDC_BUTTON5,220,199,41,16
+    PUSHBUTTON      "变形攻击",IDC_BUTTON3,220,217,41,16
+    PUSHBUTTON      "提取水印",IDC_BUTTON4,220,235,41,16
+    LTEXT           "文件(&F):",IDC_STATIC,26,8,28,8
+    GROUPBOX        "",IDC_STATIC,18,0,269,21
+    EDITTEXT        IDC_EDIT3,59,6,223,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "biClrUsed",IDC_STATIC,22,115,31,8
+    EDITTEXT        IDC_EDIT1,55,113,35,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "冗余空间",IDC_STATIC,21,135,33,8
+    EDITTEXT        IDC_EDIT12,56,133,35,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "被嵌入水印：",IDC_STATIC,21,205,50,13
+    LTEXT           "P",IDC_STATIC,82,205,8,13
+    EDITTEXT        IDC_EDIT10,96,202,45,15,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Q",IDC_STATIC,154,204,8,13
+    EDITTEXT        IDC_EDIT13,165,202,46,15,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "被提取水印：",IDC_STATIC,21,237,50,13
+    LTEXT           "P",IDC_STATIC,83,237,8,13
+    EDITTEXT        IDC_EDIT14,97,235,45,15,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Q",IDC_STATIC,155,237,8,13
+    EDITTEXT        IDC_EDIT15,165,235,46,15,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "biBitCount",IDC_STATIC,21,98,34,8
+    EDITTEXT        IDC_EDIT11,55,94,35,14,ES_AUTOHSCROLL | ES_READONLY
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "PEAnalyse.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "PEAnalyse.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_DOS_HEADER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 290
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 244
+    END
+
+    IDD_PE_HEADER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        BOTTOMMARGIN, 245
+    END
+
+    IDD_SEC_TABLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 294
+        BOTTOMMARGIN, 177
+    END
+
+    IDD_ALO_ONE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 280
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 239
+    END
+
+    IDD_ALO_TWO, DIALOG
+    BEGIN
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 236
+    END
+
+    IDD_BIT_SOURCE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 285
+        TOPMARGIN, 8
+        BOTTOMMARGIN, 208
+    END
+
+    IDD_OUR_ALO, DIALOG
+    BEGIN
+        RIGHTMARGIN, 292
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE 初始化失败。请确保 OLE 库是正确的版本。"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "PEAnalyse\n\nPEAnalyse\n\n\nPEAnalyse.Document\nPEAnalyse.Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "PEAnalyse"
+    AFX_IDS_IDLEMESSAGE     "就绪"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "创建新文档\n新建"
+    ID_FILE_OPEN            "打开现有文档\n打开"
+    ID_FILE_CLOSE           "关闭活动文档\n关闭"
+    ID_FILE_SAVE            "保存活动文档\n保存"
+    ID_FILE_SAVE_AS         "用新名称保存活动文档\n另存为"
+    ID_FILE_PAGE_SETUP      "更改打印选项\n页面设置"
+    ID_FILE_PRINT_SETUP     "更改打印机选项和打印选项\n打印设置"
+    ID_FILE_PRINT           "打印活动文档\n打印"
+    ID_FILE_PRINT_PREVIEW   "显示整页\n打印预览"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "显示程序信息、版本号和版权\n关于"
+    ID_APP_EXIT             "退出应用程序；提示保存文档\n退出"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "打开此文档"
+    ID_FILE_MRU_FILE2       "打开此文档"
+    ID_FILE_MRU_FILE3       "打开此文档"
+    ID_FILE_MRU_FILE4       "打开此文档"
+    ID_FILE_MRU_FILE5       "打开此文档"
+    ID_FILE_MRU_FILE6       "打开此文档"
+    ID_FILE_MRU_FILE7       "打开此文档"
+    ID_FILE_MRU_FILE8       "打开此文档"
+    ID_FILE_MRU_FILE9       "打开此文档"
+    ID_FILE_MRU_FILE10      "打开此文档"
+    ID_FILE_MRU_FILE11      "打开此文档"
+    ID_FILE_MRU_FILE12      "打开此文档"
+    ID_FILE_MRU_FILE13      "打开此文档"
+    ID_FILE_MRU_FILE14      "打开此文档"
+    ID_FILE_MRU_FILE15      "打开此文档"
+    ID_FILE_MRU_FILE16      "打开此文档"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "切换到下一个窗格\n下一窗格"
+    ID_PREV_PANE            "切换回上一个窗格\n上一窗格"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "将活动窗口拆分为多个窗格\n拆分"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "清除选定内容\n清除"
+    ID_EDIT_CLEAR_ALL       "清除全部内容\n全部清除"
+    ID_EDIT_COPY            "复制选定内容并将其放到剪贴板上\n复制"
+    ID_EDIT_CUT             "剪切选定内容并将其放到剪贴板上\n剪切"
+    ID_EDIT_FIND            "查找指定的文本\n查找"
+    ID_EDIT_PASTE           "插入剪贴板内容\n粘贴"
+    ID_EDIT_REPEAT          "重复上一操作\n重复"
+    ID_EDIT_REPLACE         "用其他文本替换特定的文本\n替换"
+    ID_EDIT_SELECT_ALL      "选定整个文档\n全选"
+    ID_EDIT_UNDO            "撤消上一操作\n撤消"
+    ID_EDIT_REDO            "恢复上次撤消的操作\n重做"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "显示或隐藏工具栏\n切换工具栏"
+    ID_VIEW_STATUS_BAR      "显示或隐藏状态栏\n切换状态栏"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "更改窗口大小"
+    AFX_IDS_SCMOVE          "更改窗口位置"
+    AFX_IDS_SCMINIMIZE      "将窗口缩小为图标"
+    AFX_IDS_SCMAXIMIZE      "使窗口最大化显示"
+    AFX_IDS_SCNEXTWINDOW    "切换到下一个文档窗口"
+    AFX_IDS_SCPREVWINDOW    "切换到前一个文档窗口"
+    AFX_IDS_SCCLOSE         "关闭活动窗口并提示保存文档"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "将窗口恢复到正常大小"
+    AFX_IDS_SCTASKLIST      "激活任务列表"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "关闭打印预览模式\n取消预览"
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\PEAnalyse.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "afxres.rc"         // 标准组件
+#include "afxprint.rc"       // 打印/打印预览资源
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
